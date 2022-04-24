@@ -3,14 +3,14 @@
 Console.Clear();
 Console.WriteLine("Введи основание и степень через пробел:");
 string[] numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-int osn = int.Parse(numbers[0]);
-int step = int.Parse(numbers[1]);
-Console.WriteLine($"{osn}, {step} -> {pow(osn, step)}");
+int baseNumber = int.Parse(numbers[0]);
+int degree = int.Parse(numbers[1]);
+Console.WriteLine($"{baseNumber}, {degree} -> {exponentiation(baseNumber, degree)}");
 
-int pow (int num1, int num2)
+int exponentiation(int num1, int num2)
 {
     int result = 1;
-    while(num2 > 0)
+    while (num2 > 0)
     {
         result *= num1;
         num2--;
